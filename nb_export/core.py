@@ -27,7 +27,10 @@ def extract_code(nb, pre=None):
     to_export = defaultdict(list)
 
     for code in code_iter(nb):
-        if match := re.match(r'''# exp (.+)\n''', code[0]):
+        # Can't get python 3.8 to work with github CI
+        # if match := re.match(r'''# exp (.+)\n''', code[0]):
+        match = re.match(r'''# exp (.+)\n''', code[0])
+        if match:
             target = match.group(1)
             content = ''.join(code[1:])
             if pre is not None:
