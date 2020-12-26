@@ -7,6 +7,8 @@ import json
 import re
 from collections import defaultdict
 
+from pathlib import Path
+
 # Cell
 def read_nb(nb_path):
     return  json.load(nb_path.open())
