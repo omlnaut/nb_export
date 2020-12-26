@@ -2,9 +2,13 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {}
+index = {"read_nb": "00_core.ipynb",
+         "nb_iter": "00_core.ipynb",
+         "code_iter": "00_core.ipynb",
+         "extract_code": "00_core.ipynb",
+         "build_all": "00_core.ipynb"}
 
-modules = []
+modules = ["core.py"]
 
 doc_url = "https://omlnaut.github.io/nb_export/"
 
