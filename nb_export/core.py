@@ -56,7 +56,7 @@ def build_all(read_base_path, save_base_path=None):
     regular = []
 
     for file in merged.keys():
-        for cell in merged['common']:
+        for cell in merged[file]:
             if 'import ' in cell:
                 imports.append(cell)
             else:
